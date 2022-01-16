@@ -1,0 +1,42 @@
+.navbar {
+  background-color: #1f3162;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  justify-content: center;
+}
+
+.nav-timer {
+  display: flex;
+  justify-content: space-around;
+  height: 50px !important;
+  padding: 0px;
+}
+
+.time-div {
+  display: flex;
+  flex-direction: column;
+  height: 50px !important;
+}
+.time {
+  font-weight: bolder;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-b {
+  display: flex;
+  height: 66px;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links {
+  font-size: 14px;
+  font-weight: bold;
+}
