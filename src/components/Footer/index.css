@@ -21,12 +21,14 @@
 }
 
 .footer-title {
+  height: 30px;
   color: #f6437d;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 0;
 }
 .footer-p {
+  height: 20px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 300;

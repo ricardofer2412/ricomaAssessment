@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import cart from "./images/Cart Icon.svg";
 
 export default function Navbar() {
   return (
@@ -38,6 +39,7 @@ export default function Navbar() {
         <p className="nav-links">IPSUM</p>
         <p className="nav-links">EXCEPTEUR</p>
         <p className="nav-links">VENIAM</p>
+        <img src={cart} alt="cart" />
       </div>
     </div>
   );
