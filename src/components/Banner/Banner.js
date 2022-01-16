@@ -16,7 +16,7 @@ export default function Banner() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <button className="lorem">Lorem</button>
+          <button className="lorem ">Lorem</button>
         </div>
       </div>
       <div className="banner-right">

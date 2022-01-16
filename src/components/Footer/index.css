@@ -1,0 +1,35 @@
+.footer {
+  background-color: black;
+  height: 244px;
+  display: flex;
+}
+
+.footer-col-one {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-col-two {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-col-two {
+  width: 30%;
+}
+
+.footer-title {
+  color: #f6437d;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+.footer-p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 5px;
+}
