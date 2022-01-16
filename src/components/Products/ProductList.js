@@ -31,16 +31,25 @@ export default class ProductList extends Component {
         imageFile: productOne,
       },
     ],
+
+    cartProdcuts: [],
   };
+
+  addToCart = (product) => {
+    console.log("product", product);
+  };
+
   render() {
     return (
       <div className="productList">
-        {this.state.productList.map((product) => (
+        {this.state.productList.map((product, index) => (
           <ProductCard
+            key={index}
             name={product.name}
             description={product.description}
             color={product.color}
             image={product.imageFile}
+            addNewItem={() => this.addToCart(product)}
           />
         ))}
       </div>

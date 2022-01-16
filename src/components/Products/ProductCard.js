@@ -26,7 +26,9 @@ export default function ProductCard(props) {
       </div>
 
       <div className="button-div">
-        <a className="submit-btn"> Add to cart</a>
+        <button onClick={props.addNewItem} className="submit-btn">
+          Add to cart
+        </button>
       </div>
     </div>
   );
