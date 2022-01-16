@@ -32,11 +32,18 @@ export default class ProductList extends Component {
       },
     ],
 
-    cartProdcuts: [],
+    cartProducts: [],
   };
 
   addToCart = (product) => {
-    console.log("product", product);
+    const newArray = this.state.cartProducts;
+
+    newArray.push(product);
+
+    this.setState({
+      cartProducts: newArray,
+    });
+    console.log("Cart", this.state.cartProducts);
   };
 
   render() {
