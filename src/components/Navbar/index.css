@@ -40,3 +40,29 @@
   font-size: 14px;
   font-weight: bold;
 }
+
+.cartImg {
+  width: 95px;
+  height: 96px;
+  border-radius: 10px;
+}
+
+.cart-products-list {
+  display: flex;
+  justify-content: space-around;
+  width: 317px;
+}
+
+.cart-products-list-img {
+  width: 35%;
+}
+
+.cart-products-list-desc {
+  width: 65%;
+}
+.cart-products-list-title {
+  font-size: 23px;
+}
+.remove-btn {
+  text-decoration: underline;
+}

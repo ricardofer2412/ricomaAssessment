@@ -4,46 +4,52 @@ import "./index.css";
 import productOne from "./imgs/product1.jpeg";
 
 export default class ProductList extends Component {
-  state = {
-    productList: [
-      {
-        name: "Lorem ipsum1",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        color: ["143061", "81396F", "F6437D"],
-        imageFile: productOne,
-      },
-      {
-        name: "Lorem ipsum2",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        color: ["143061", "81396F", "F6437D"],
-        imageFile: productOne,
-      },
-      {
-        name: "Lorem ipsum3",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        color: ["143061", "81396F", "F6437D"],
-        imageFile: productOne,
-      },
-      {
-        name: "Lorem ipsum4",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        color: ["143061", "81396F", "F6437D"],
-        imageFile: productOne,
-      },
-    ],
+  constructor(props) {
+    super(props);
+    this.state = {
+      productList: [
+        {
+          id: 0,
+          name: "Lorem ipsum1",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          color: ["143061", "81396F", "F6437D"],
+          imageFile: productOne,
+        },
+        {
+          id: 1,
+          name: "Lorem ipsum2",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          color: ["143061", "81396F", "F6437D"],
+          imageFile: productOne,
+        },
+        {
+          id: 2,
+          name: "Lorem ipsum3",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          color: ["143061", "81396F", "F6437D"],
+          imageFile: productOne,
+        },
+        {
+          id: 3,
+          name: "Lorem ipsum4",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          color: ["143061", "81396F", "F6437D"],
+          imageFile: productOne,
+        },
+      ],
 
-    cartProducts: [],
-  };
+      cartProducts: [],
+    };
+  }
 
   addToCart = (product) => {
     const newArray = this.state.cartProducts;
-
     newArray.push(product);
-
-    this.setState({
-      cartProducts: newArray,
-    });
-    console.log("Cart", this.state.cartProducts);
+    this.props.setCartList(this.state.cartProducts);
   };
 
   render() {

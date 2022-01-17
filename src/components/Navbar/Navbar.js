@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import cart from "./images/Cart Icon.svg";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Divider from "@mui/material/Divider";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  function removeItem(id) {
+    console.log(id);
+  }
+
   return (
     <div className="nav">
       <div className="navbar">
@@ -70,9 +77,29 @@ export default function Navbar() {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            {props.cartList.map((product) => (
+              <MenuItem onClick={handleClose}>
+                <div className="cart-products-list">
+                  <div className="cart-products-list-img">
+                    <img
+                      className="cartImg"
+                      src={product.imageFile}
+                      alt="imageProd"
+                    />
+                  </div>
+                  <div className="cart-products-list-desc">
+                    <p className="cart-products-list-title">{product.name}</p>
+                    <button
+                      onClick={() => removeItem(product.id)}
+                      className="remove-btn"
+                    >
+                      remove
+                    </button>
+                  </div>
+                </div>
+                <Divider />
+              </MenuItem>
+            ))}
           </Menu>
         </div>
       </div>
